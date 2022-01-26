@@ -1,0 +1,33 @@
+.layout {
+  min-height: 100vh;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url(../public/cartoon_space.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.layout__main {
+  padding: 40px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.25rem;
+  max-width: 1300px;
+}
+
+.layout__title {
+  font-size: 4.5rem;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #f0d9e7, 0 0 20px #f0d9e7, 0 0 30px #a45cff,
+    0 0 40px #a45cff;
+}

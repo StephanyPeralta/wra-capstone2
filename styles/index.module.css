@@ -1,0 +1,36 @@
+.home__alert {
+  display: flex;
+  color: darkred;
+  align-items: center;
+  background-color: #ffebee;
+  border-radius: 10px;
+  min-height: 50px;
+  margin: 15px auto;
+  padding: 6px 16px;
+  width: 100%;
+}
+
+.home__error {
+  padding: 8px 15px;
+}
+
+.home__spinner {
+  animation: rotate 1s linear infinite;
+}
+
+.home__loader {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  margin: 30px auto;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

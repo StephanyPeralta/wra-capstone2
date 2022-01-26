@@ -1,0 +1,46 @@
+.date {
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.date__text {
+  font-size: 2rem;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 300;
+  margin: 15px 0 10px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #f0d9e7, 0 0 20px #f0d9e7, 0 0 30px #a45cff,
+    0 0 40px #a45cff;
+}
+
+.date__form {
+  display: flex;
+  justify-content: center;
+}
+
+.date__inputWrapper {
+  position: relative;
+}
+
+.date__input {
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  border-radius: 10px 0 0 10px;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 16px;
+  height: 50px;
+  padding: 5px 7px;
+}
+
+.date__button {
+  color: #fff;
+  cursor: pointer;
+  height: 100%;
+  background: #a45cff;
+  border: 2px solid #a45cff;
+  border-radius: 0 10px 10px 0;
+  padding: 5px 7px;
+  transition: all 0.3s ease-in-out;
+}
