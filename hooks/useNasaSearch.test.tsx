@@ -1,10 +1,6 @@
 import { renderHook } from "@testing-library/react-hooks";
 import { useNasaSearch } from "./useNasaSearch";
-import { useFetch } from "./useFetch";
-
-jest.mock("./useFetch");
-
-const useFecthMock = useFetch as jest.MockedFunction<typeof useFetch>;
+import * as useFetch from "./useFetch";
 
 const data = {
   date: "2022-01-24",
@@ -14,19 +10,15 @@ const data = {
   url: "https://test.com",
 };
 
-global.fetch = jest.fn(() =>
-  Promise.resolve({
-    json: () => Promise.resolve({ data }),
-  })
-) as jest.Mock;
-
 describe("useNasaSearch hook", () => {
-  beforeEach(() => {
-    jest.clearAllMocks();
+  const spy = jest.spyOn(useFetch, "useFetch");
+
+  afterEach(() => {
+    spy.mockClear();
   });
 
   it("fetches data correctly", () => {
-    useFecthMock.mockImplementation(() => ({
+    spy.mockImplementation(() => ({
       data,
       isLoading: false,
       error: null,
@@ -40,7 +32,7 @@ describe("useNasaSearch hook", () => {
   });
 
   it("handles isLoading state correctly", () => {
-    useFecthMock.mockImplementation(() => ({
+    spy.mockImplementation(() => ({
       data,
       isLoading: true,
       error: null,
@@ -53,7 +45,7 @@ describe("useNasaSearch hook", () => {
   });
 
   it("handles error state correctly", () => {
-    useFecthMock.mockImplementation(() => ({
+    spy.mockImplementation(() => ({
       data,
       isLoading: false,
       error: "Error Test",
