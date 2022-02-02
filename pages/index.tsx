@@ -3,8 +3,8 @@ import { FaSpinner } from "react-icons/fa";
 import { FiAlertCircle } from "react-icons/fi";
 
 import InfoSection from "../components/InfoSection";
-import DatePicker from "../components/DatePicker";
-import { useNasaSearch } from "hooks/useNasaSearch";
+import DateForm from "../components/DateForm";
+import { useNasaSearch } from "../hooks/useNasaSearch";
 import styles from "../styles/index.module.css";
 
 export default function Home() {
@@ -20,16 +20,16 @@ export default function Home() {
       <div>
         <div className={styles.home__alert}>
           <FiAlertCircle />
-          <span className={styles.home__error}> {error}</span>
+          <span className={styles.home__error}>{error}</span>
         </div>
-        <DatePicker handleDate={handleDate} />
+        <DateForm handleDate={handleDate} />
       </div>
     );
   }
 
   if (isLoading) {
     return (
-      <div className={styles.home__loader}>
+      <div className={styles.home__loader} data-testid="loader-icon">
         <FaSpinner size={60} className={styles.home__spinner} />
       </div>
     );
@@ -38,7 +38,7 @@ export default function Home() {
   return (
     <>
       <InfoSection {...data} />
-      <DatePicker handleDate={handleDate} />
+      <DateForm handleDate={handleDate} />
     </>
   );
 }

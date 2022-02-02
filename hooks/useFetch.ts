@@ -24,6 +24,7 @@ function useFetch(
         `${url}?${new URLSearchParams(options.params)}`
       );
       const data = await response.json();
+
       if (response.ok) {
         setData(data);
       } else {
@@ -33,7 +34,6 @@ function useFetch(
       setError("There was an error, please try again.");
     }
     setIsLoading(false);
-    // eslint-disable-next-line
   }, [url, options.params]);
 
   useEffect(() => {
