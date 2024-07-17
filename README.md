@@ -1,23 +1,15 @@
-# Next.js + Jest
+# APOD App
 
-This example shows how to configure Jest to work with Next.js.
+A Next.js app integrated with the NASA API offering a captivating journey through space exploration. Discover the latest image or video of the day and explore an archive of past visuals. Utilize the calendar button to select specific dates and uncover historical images and videos.
 
-This includes Next.js' built-in support for Global CSS, CSS Modules and TypeScript.
+## Tools & Technologies
 
-## How to Use
+- Next.js
+- TypeScript
+- CSS modules
+- NASA API
+- Vercel
 
-Quickly get started using [Create Next App](https://github.com/vercel/next.js/tree/canary/packages/create-next-app#readme)!
+## Live Mode
 
-In your terminal, run the following command:
-
-```bash
-npx create-next-app --example with-jest with-jest-app
-# or
-yarn create next-app --example with-jest with-jest-app
-```
-
-## Run Jest Tests
-
-```bash
-npm test
-```
+See [APOD App](https://wra-capstone2.vercel.app/).
